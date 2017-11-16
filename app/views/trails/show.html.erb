@@ -18,7 +18,7 @@
 
   <p>
     <strong>Maplink:</strong>
-    <%= @trail.maplink %>
+    <%= link_to "Link to Map", "#{@trail.maplink}", :target => "_blank" %>
   </p>
 
   <%= link_to 'Edit', edit_trail_path(@trail) %> |
