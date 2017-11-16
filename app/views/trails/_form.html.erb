@@ -1,0 +1,37 @@
+<%= form_with(model: trail, local: true) do |form| %>
+  <% if trail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(trail.errors.count, "error") %> prohibited this trail from being saved:</h2>
+
+      <ul>
+      <% trail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :trail_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :trail_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :notes %>
+    <%= form.text_field :notes, id: :trail_notes %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maplink %>
+    <%= form.text_field :maplink, id: :trail_maplink %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
