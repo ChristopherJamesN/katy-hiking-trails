@@ -1,24 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="container well-lg">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @trail.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @trail.name %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @trail.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @trail.description %>
+  </p>
 
-<p>
-  <strong>Notes:</strong>
-  <%= @trail.notes %>
-</p>
+  <p>
+    <strong>Notes:</strong>
+    <%= @trail.notes %>
+  </p>
 
-<p>
-  <strong>Maplink:</strong>
-  <%= @trail.maplink %>
-</p>
+  <p>
+    <strong>Maplink:</strong>
+    <%= @trail.maplink %>
+  </p>
 
-<%= link_to 'Edit', edit_trail_path(@trail) %> |
-<%= link_to 'Back', trails_path %>
+  <%= link_to 'Edit', edit_trail_path(@trail) %> |
+  <%= link_to 'Back', trails_path %>
+</div>
