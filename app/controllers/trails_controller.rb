@@ -7,6 +7,9 @@ class TrailsController < ApplicationController
     @trails = Trail.all
   end
 
+  def home
+  end
+
   # GET /trails/1
   # GET /trails/1.json
   def show
