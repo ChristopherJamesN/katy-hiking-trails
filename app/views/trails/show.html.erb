@@ -1,5 +1,7 @@
 <div class="container well-lg">
   <p id="notice"><%= notice %></p>
+  <%= link_to 'Back', trails_path %>
+  <br></br>
 
   <p>
     <strong>Name:</strong>
@@ -30,5 +32,5 @@
     <br></br>
     <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}&q=#{@trail.name},Katy+TX", width: 800, height: 800, frameborder: 0  %>
 
-  <%= link_to 'Back', trails_path %>
+
 </div>
