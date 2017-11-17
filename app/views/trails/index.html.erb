@@ -7,6 +7,7 @@
     <tr>
       <th>Name </th>
       <th>Description </th>
+      <th>KML File (If Applicable) </th>
       <th>Maplink </th>
       <th colspan="3"></th>
     </tr>
@@ -17,6 +18,7 @@
       <tr>
         <td><%= trail.name %></td>
         <td><%= trail.description %></td>
+        <td></td>
         <td><%= link_to "Link to Map", "#{trail.maplink}", :target => "_blank" %></td>
         <td><%= link_to 'Show', trail %></td>
       </tr>
