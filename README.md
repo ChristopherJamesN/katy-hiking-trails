@@ -1,24 +1,16 @@
 # README
+Hosted on Heroku here: https://katy-hiking-trails.herokuapp.com/
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
+To test out this application locally, fork and clone the repo.
+`$ git clone your-local-fork-here`
 
-Things you may want to cover:
+## Usage
+Run `bundle install`, `rake db:migrate`, `rake db:seed`, `rails s`, and navigate to the appropriate location in your browser to interact with the application.
 
-* Ruby version
+## Contributing
+Bug reports and pull requests are welcome on GitHub at https://github.com/ChristopherJamesN/katy-hiking-trails. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+The application is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
