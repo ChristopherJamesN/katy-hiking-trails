@@ -9,12 +9,12 @@ class TrailsController < ApplicationController
 
   def barker
     @trails = Trail.where(reservoir: 'barker')
-    render: index
+    render :index
   end
 
   def addicks
     @trails = Trail.where(reservoir: 'addicks')
-    render: index
+    render :index
   end
 
   def home
