@@ -7,6 +7,16 @@ class TrailsController < ApplicationController
     @trails = Trail.all
   end
 
+  def barker
+    @trails = Trail.where(reservoir: 'barker')
+    render: index
+  end
+
+  def addicks
+    @trails = Trail.where(reservoir: 'addicks')
+    render: index
+  end
+
   def home
   end
 
