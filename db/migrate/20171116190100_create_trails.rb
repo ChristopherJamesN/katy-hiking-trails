@@ -5,6 +5,7 @@ class CreateTrails < ActiveRecord::Migration[5.1]
       t.string :description
       t.string :notes
       t.string :maplink
+      t.string :kmlfile
 
       t.timestamps
     end

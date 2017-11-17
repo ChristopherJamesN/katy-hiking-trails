@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20171116190100) do
     t.string "description"
     t.string "notes"
     t.string "maplink"
+    t.string "kmlfile"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
