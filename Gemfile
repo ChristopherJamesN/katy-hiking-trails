@@ -11,6 +11,8 @@ gem 'rails_12factor'
 gem "sprockets"
 gem "sprockets-es6"
 
+gem 'dotenv-rails', groups: [:development, :test]
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
