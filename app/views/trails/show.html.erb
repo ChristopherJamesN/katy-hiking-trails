@@ -3,30 +3,38 @@
   <%= link_to 'Back', trails_path %>
   <br></br>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @trail.name %>
-  </p>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Attribute </th>
+        <th>Details </th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @trail.description %>
-  </p>
-
-  <p>
-    <strong>Notes:</strong>
-    <%= @trail.notes %>
-  </p>
-
-  <p>
-    <strong>Maplink:</strong>
-    <%= link_to "Link to Map", "#{@trail.maplink}", :target => "_blank" %>
-  </p>
-
-  <p>
-    <strong>KML File:</strong>
-    <%= @trail.kmlfile %>
-  </p>
+    <tbody>
+      <tr>
+        <td>Name: </td>
+        <td><%= @trail.name %></td>
+      </tr>
+      <tr>
+        <td>Description: </td>
+        <td><%= @trail.description %></td>
+      </tr>
+      <tr>
+        <td>Notes: </td>
+        <td><%= @trail.notes %></td>
+      </tr>
+      <tr>
+        <td>Link to Map: </td>
+        <td><%= link_to :MapLink, @trail.maplink, target: "_blank" %></td>
+      </tr>
+      <tr>
+        <td>KML File(if applicable): </td>
+        <td><%= @trail.kmlfile %></td>
+      </tr>
+    </tbody>
+  </table>
 
     <strong>Google Map:</strong>
     <br></br>
