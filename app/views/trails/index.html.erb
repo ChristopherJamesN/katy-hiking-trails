@@ -7,7 +7,6 @@
     <tr>
       <th>Name </th>
       <th>Description </th>
-      <th>Notes </th>
       <th>Maplink </th>
       <th colspan="3"></th>
     </tr>
@@ -18,7 +17,6 @@
       <tr>
         <td><%= trail.name %></td>
         <td><%= trail.description %></td>
-        <td><%= trail.notes %></td>
         <td><%= link_to "Link to Map", "#{trail.maplink}", :target => "_blank" %></td>
         <td><%= link_to 'Show', trail %></td>
       </tr>
