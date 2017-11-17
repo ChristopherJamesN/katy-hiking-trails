@@ -1,5 +1,5 @@
 # README
-Hosted on Heroku here: https://katy-hiking-trails.herokuapp.com/
+A web application built on Rails used to list maintained hiking trails in the Katy, Texas area. Hosted on Heroku here: https://katy-hiking-trails.herokuapp.com/
 
 ## Installation
 To test out this application locally, fork and clone the repo.
