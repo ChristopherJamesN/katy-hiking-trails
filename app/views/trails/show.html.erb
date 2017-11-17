@@ -26,5 +26,9 @@
     <%= @trail.kmlfile %>
   </p>
 
+    <strong>Google Map:</strong>
+    <br></br>
+    <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?q=Mason%20Highland%2C%20Katy%2C%20TX%2077450&key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}", width: 600, height: 450, frameborder: 0  %>
+
   <%= link_to 'Back', trails_path %>
 </div>
