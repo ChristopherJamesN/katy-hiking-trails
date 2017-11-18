@@ -39,7 +39,7 @@
   <% if @trail.maplink != nil %>
     <strong>Google Map:</strong>
     <br></br>
-    <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}&q=#{@trail.name},Katy+TX", width: 800, height: 800, frameborder: 0  %>
+    <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}&q=#{@trail.name.gsub!(/\s/,'+')},Katy+TX+77450", width: 800, height: 800, frameborder: 0  %>
   <% end %>
 
 </div>
