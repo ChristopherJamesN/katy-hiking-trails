@@ -16,7 +16,7 @@
     <% @trails.each do |trail| %>
       <tr>
         <td><%= link_to trail.name, trail %></td>
-        <td><%= trail.reservoir %></td>
+        <td><%= trail.reservoir.capitalize %></td>
         <td><%= link_to "Link to Map", "#{trail.maplink}", :target => "_blank" %></td>
         <td><%= link_to 'Trail Detail', trail %></td>
       </tr>
