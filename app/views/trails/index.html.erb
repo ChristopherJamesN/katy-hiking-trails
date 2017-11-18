@@ -20,7 +20,7 @@
         <% if trail.maplink != nil %>
           <td><%= link_to "Link to Map", "#{trail.maplink}", :target => "_blank" %></td>
         <% else %>
-          <td><%= link_to "Link to Map", "https://www.google.com/maps/place/#{trail.name},+Katy,+TX,+77450/", :target => "_blank" %></td>
+          <td>Sorry, this trail is not currently mapped.</td>
         <% end %>
         <td><%= link_to 'Trail Detail', trail %></td>
       </tr>

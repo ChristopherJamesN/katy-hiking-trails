@@ -26,7 +26,7 @@
         <% if @trail.maplink != nil %>
           <td><%= link_to :MapLink, @trail.maplink, :target => "_blank" %></td>
         <% else %>
-          <td><%= link_to "Link to Map", "https://www.google.com/maps/place/#{@trail.name},+Katy,+TX,+77450/", :target => "_blank" %></td>
+          <td>Sorry, this trail is not currently mapped.</td>
         <% end %>
       </tr>
       <tr>
@@ -36,9 +36,10 @@
     </tbody>
   </table>
 
+  <% if @trail.maplink != nil %>
     <strong>Google Map:</strong>
     <br></br>
     <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}&q=#{@trail.name},Katy+TX", width: 800, height: 800, frameborder: 0  %>
-
+  <% end %>
 
 </div>
