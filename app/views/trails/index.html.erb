@@ -6,7 +6,6 @@
   <thead>
     <tr>
       <th>Name </th>
-      <th>Description </th>
       <th>Reservoir </th>
       <th>KML File (If Applicable) </th>
       <th>Maplink </th>
@@ -18,11 +17,10 @@
     <% @trails.each do |trail| %>
       <tr>
         <td><%= trail.name %></td>
-        <td><%= trail.description %></td>
         <td><%= trail.reservoir %></td>
         <td><%= trail.kmlfile%></td>
         <td><%= link_to "Link to Map", "#{trail.maplink}", :target => "_blank" %></td>
-        <td><%= link_to 'Show', trail %></td>
+        <td><%= link_to 'Trail Detail', trail %></td>
       </tr>
     <% end %>
   </tbody>
