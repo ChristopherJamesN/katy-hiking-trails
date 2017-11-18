@@ -18,7 +18,7 @@
         <td><%= link_to trail.name, trail %></td>
         <td><%= trail.reservoir.capitalize %></td>
         <% if trail.maplink != nil %>
-          <td><%= link_to "Link to Map", "#{trail.maplink}", :target => "_blank" %></td>
+          <td><%= link_to "Link to Map (Opens in new tab)", "#{trail.maplink}", :target => "_blank" %></td>
         <% else %>
           <td>Sorry, this trail is not currently mapped.</td>
         <% end %>

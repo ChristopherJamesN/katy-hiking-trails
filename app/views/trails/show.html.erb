@@ -24,7 +24,7 @@
       <tr>
         <td>Link to Map: </td>
         <% if @trail.maplink != nil %>
-          <td><%= link_to :MapLink, @trail.maplink, :target => "_blank" %></td>
+          <td><%= link_to "Google Maps (Opens in new tab)", @trail.maplink, :target => "_blank" %></td>
         <% else %>
           <td>Sorry, this trail is not currently mapped.</td>
         <% end %>
