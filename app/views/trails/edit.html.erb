@@ -1,8 +1,7 @@
 <div class="container well-lg">
-  <h1>Editing Trail</h1>
+  <h1>Adding Note for <%= @trail.name %></h1>
 
   <%= render 'form', trail: @trail %>
-
-  <%= link_to 'Show', @trail %> |
-  <%= link_to 'Back', trails_path %>
+  
+  <%= link_to 'Back', @trail, class: 'btn btn-primary' %>
 </div>

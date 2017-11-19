@@ -1,6 +1,7 @@
 <div class="container well-lg">
   <p id="notice"><%= notice %></p>
-  <button type="button" class="btn btn-primary" onclick="window.history.back()">Back</button>
+  <%= link_to 'Back', trails_path, class: 'btn btn-primary' %>
+  <%= link_to 'Add Note', edit_trail_path, class: 'btn btn-primary' %>
   <br></br>
 
   <table class="table">
@@ -22,6 +23,10 @@
         <td><%= @trail.description %></td>
       </tr>
       <tr>
+        <td>Notes: </td>
+        <td><%= @trail.notes %></td>
+      </tr>
+      <tr>
         <td>Link to Map: </td>
         <% if @trail.maplink != nil %>
           <td><%= link_to "Google Maps (Opens in new tab)", @trail.maplink, :target => "_blank" %></td>
@@ -35,6 +40,8 @@
       </tr>
     </tbody>
   </table>
+
+  <br></br>
 
   <% if @trail.name == "Twine" %>
     <strong>Google Map:</strong>
