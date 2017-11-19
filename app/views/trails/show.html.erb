@@ -51,7 +51,7 @@
   <% elsif @trail.name == "Westheimer Pkwy Connector" %>
     <strong>Google Map:</strong>
     <br></br>
-    <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}&q=Wilderness+Trail,TX+77082", width: 800, height: 800, frameborder: 0  %>
+    <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/view?zoom=17&center=29.7283148%2C-95.7191001&key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}", width: 800, height: 800, frameborder: 0  %>
   <% elsif @trail.name == "Bayou View" %>
     <strong>Google Map:</strong>
     <br></br>
