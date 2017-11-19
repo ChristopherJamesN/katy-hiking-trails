@@ -36,7 +36,43 @@
     </tbody>
   </table>
 
-  <% if @trail.maplink != nil %>
+  <% if @trail.name == "Twine" %>
+    <strong>Google Map:</strong>
+    <br></br>
+    <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}&q=Twine+Trail,Houston+TX", width: 800, height: 800, frameborder: 0  %>
+  <% elsif @trail.name == "Mason Highland" %>
+    <strong>Google Map:</strong>
+    <br></br>
+    <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}&q=Mason+Highland,Houston+TX", width: 800, height: 800, frameborder: 0  %>
+  <% elsif @trail.name == "Wilderness" %>
+    <strong>Google Map:</strong>
+    <br></br>
+    <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}&q=Wilderness+Trail,Houston+TX", width: 800, height: 800, frameborder: 0  %>
+  <% elsif @trail.name == "Westheimer Pkwy Connector" %>
+    <strong>Google Map:</strong>
+    <br></br>
+    <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}&q=Wilderness+Trail,TX+77082", width: 800, height: 800, frameborder: 0  %>
+  <% elsif @trail.name == "Bayou View" %>
+    <strong>Google Map:</strong>
+    <br></br>
+    <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}&q=Bayou+View+Trail,Katy+TX", width: 800, height: 800, frameborder: 0  %>
+  <% elsif @trail.name == "Bill Archer Bark Park to Cullen Trail" %>
+    <strong>Google Map:</strong>
+    <br></br>
+    <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}&q=Bill+Archer+Park+Connector,Houston+TX", width: 800, height: 800, frameborder: 0  %>
+  <% elsif @trail.name == "Bill Archer Park Connector" %>
+    <strong>Google Map:</strong>
+    <br></br>
+    <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}&q=Bill+Archer+Park+Connector,Houston+TX", width: 800, height: 800, frameborder: 0  %>
+  <% elsif @trail.name == "Bear Creek to Langham Creek" %>
+    <strong>Google Map:</strong>
+    <br></br>
+    <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}&q=Bear+Creek+Langham+Creek,Houston+TX", width: 800, height: 800, frameborder: 0  %>
+  <% elsif @trail.name == "Langham Creek to Woodcreek" %>
+    <strong>Google Map:</strong>
+    <br></br>
+    <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}&q=Langham+Creek+Woodcreek,Houston+TX", width: 800, height: 800, frameborder: 0  %>
+  <% elsif @trail.maplink != nil %>
     <strong>Google Map:</strong>
     <br></br>
     <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/place?key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}&q=#{@trail.name.gsub!(/\s/,'+')}+Trail,Houston+TX", width: 800, height: 800, frameborder: 0  %>
