@@ -54,8 +54,8 @@ class TrailsController < ApplicationController
   # PATCH/PUT /trails/1.json
   def update
     respond_to do |format|
-      if @trail.update(trail_params)
-        format.html { redirect_to @trail, notice: 'Trail was successfully updated.' }
+      if @trail.update_attribute(:notes, @trail.notes + trail_params[:notes].to_s + "\n")
+        format.html { redirect_to @trail, notice: 'Note was successfully added.' }
         format.json { render :show, status: :ok, location: @trail }
       else
         format.html { render :edit }
