@@ -28,4 +28,9 @@
   </tbody>
 </table>
 
+<% if current_page?(controller: 'trails', action:('barker')) %>
+  <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/view?zoom=14&center=29.7697%2C-95.6463&key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}", width: 800, height: 800, frameborder: 0  %>
+<% elsif current_page?(controller: 'trails', action:('addicks'))%>
+  <%= content_tag :iframe, '', src: "https://www.google.com/maps/embed/v1/view?zoom=14&center=29.7908%2C-95.6236&key=#{ENV['GOOGLE_MAPS_EMBED_API_KEY']}", width: 800, height: 800, frameborder: 0  %>
+<% end %>
 <br>
