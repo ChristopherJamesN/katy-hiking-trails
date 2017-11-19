@@ -11,12 +11,10 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :note %>
-    <%= form.text_field :notes, id: :trail_notes %>
+  <div class="form-group">
+    <input type="text" class="form-control" id="trail" name="trail[notes]" placeholder="Add a note here">
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+
 <% end %>
