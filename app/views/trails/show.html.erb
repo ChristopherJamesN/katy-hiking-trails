@@ -1,7 +1,7 @@
 <div class="container well-lg">
   <p id="notice"><%= notice %></p>
   <%= link_to 'Back', trails_path, class: 'btn btn-primary' %>
-  <%= link_to 'Add Note', edit_trail_path, class: 'btn btn-primary' %>
+  <%= link_to 'Add Comment', edit_trail_path, class: 'btn btn-primary' %>
   <br></br>
 
   <table class="table">
@@ -23,7 +23,7 @@
         <td><%= @trail.description %></td>
       </tr>
       <tr>
-        <td>Notes: </td>
+        <td>Comments: </td>
         <td><%= @trail.notes %></td>
       </tr>
       <tr>
