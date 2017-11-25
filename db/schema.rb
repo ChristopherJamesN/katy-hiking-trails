@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 20171116190100) do
   create_table "trails", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "notes"
+    t.string "notes", default: [], array: true
     t.string "maplink"
     t.string "kmlfile"
     t.string "reservoir"
