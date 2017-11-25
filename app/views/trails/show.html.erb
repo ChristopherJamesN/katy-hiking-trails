@@ -24,7 +24,11 @@
       </tr>
       <tr>
         <td>Comments: </td>
-        <td><%= @trail.notes %></td>
+        <td>
+          <% @trail.notes.each do |note| %>
+            <p> <%= note %> </p>
+          <% end %>
+        </td>
       </tr>
       <tr>
         <td>Link to Map: </td>
