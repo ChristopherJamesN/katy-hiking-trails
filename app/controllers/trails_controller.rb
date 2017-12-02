@@ -7,6 +7,15 @@ class TrailsController < ApplicationController
     @trails = Trail.all
   end
 
+  def favorites
+    @trails = current_user.trails
+    render :index
+  end
+
+  def favorite
+    render :index
+  end
+
   def barker
     @trails = Trail.where(reservoir: 'barker')
     render :index
