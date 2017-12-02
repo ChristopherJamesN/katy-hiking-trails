@@ -1,8 +1,10 @@
 <div class="container well-lg">
   <p id="notice"><%= notice %></p>
   <%= link_to 'Back', trails_path, class: 'btn btn-primary' %>
-  <%= link_to 'Add Comment', edit_trail_path, class: 'btn btn-primary' %>
-  <%= link_to 'Add to Favorites', {:controller => "trails", :action => "favorite", :id => @trail.id }, class: 'btn btn-primary' %>
+  <% if current_user %>
+    <%= link_to 'Add Comment', edit_trail_path, class: 'btn btn-primary' %>
+    <%= link_to 'Add to Favorites', {:controller => "trails", :action => "favorite", :id => @trail.id }, class: 'btn btn-primary' %>
+  <% end %>
   <br></br>
 
   <table class="table">
