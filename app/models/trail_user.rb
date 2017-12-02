@@ -1,4 +1,4 @@
 class TrailUser < ApplicationRecord
-  has_many :trails
-  has_many :users
+  belongs_to :trail
+  belongs_to :user
 end

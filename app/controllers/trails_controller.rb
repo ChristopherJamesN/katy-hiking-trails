@@ -13,6 +13,9 @@ class TrailsController < ApplicationController
   end
 
   def favorite
+    @trail = Trail.find(params[:id])
+    @trail.users << current_user
+    @trails = current_user.trails
     render :index
   end
 
