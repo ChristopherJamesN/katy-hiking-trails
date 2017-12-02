@@ -25,6 +25,7 @@
                     <li><%= link_to "Sign In", new_user_session_url %></li>
                     <li><%= link_to "Sign Up", "/users/sign_up" %></li>
                   <% elsif current_user %>
+                    <li><a href="/trails/favorites"> Favorite Trails </a></li>
                     <li><%= link_to "Sign Out", destroy_user_session_path, :method => 'delete' %></li>
                   <% end %>
                   <li><a href="https://waterdata.usgs.gov/tx/nwis/uv?cb_all_=on&cb_00054=on&cb_62615=on&cb_62615=on&format=gif_default&site_no=08073000&period=&begin_date=&end_date" target="_blank"> Addicks Water Gauge (External) </a></li>

@@ -19,6 +19,13 @@ class TrailsController < ApplicationController
     render :index
   end
 
+  def remove
+    @trail = Trail.find(params[:id])
+    @trail.users.delete(current_user)
+    @trails = current_user.trails
+    render :index
+  end
+
   def barker
     @trails = Trail.where(reservoir: 'barker')
     render :index
