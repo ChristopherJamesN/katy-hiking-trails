@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :trail_users
-  has_many :trails
+  has_many :trails, through: :trail_users
 end
