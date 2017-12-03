@@ -42,6 +42,7 @@ class TrailsController < ApplicationController
   # GET /trails/1
   # GET /trails/1.json
   def show
+    @trail_user = TrailUser.find_by(user_id: current_user.id, trail_id: @trail.id)
   end
 
   # GET /trails/new
@@ -72,15 +73,18 @@ class TrailsController < ApplicationController
   # PATCH/PUT /trails/1
   # PATCH/PUT /trails/1.json
   def update
-    respond_to do |format|
-      if @trail.update_attribute(:notes, @trail.notes.push(trail_params[:notes].to_s))
-        format.html { redirect_to @trail, notice: 'Comment was successfully added.' }
-        format.json { render :show, status: :ok, location: @trail }
-      else
-        format.html { render :edit }
-        format.json { render json: @trail.errors, status: :unprocessable_entity }
-      end
-    end
+    @trail_user = TrailUser.find_or_create_by(user_id: current_user.id, trail_id: @trail.id)
+    @trail_user.comments << params[:trail][:notes]
+    redirect_to @trail, notice: 'Comment was successfully added.'
+    #respond_to do |format|
+    #  if @trail.update_attribute(:notes, @trail.notes.push(trail_params[:notes].to_s))
+    #    format.html { redirect_to @trail, notice: 'Comment was successfully added.' }
+    #    format.json { render :show, status: :ok, location: @trail }
+    #  else
+    #    format.html { render :edit }
+    #    format.json { render json: @trail.errors, status: :unprocessable_entity }
+    #  end
+    #end
   end
 
   # DELETE /trails/1

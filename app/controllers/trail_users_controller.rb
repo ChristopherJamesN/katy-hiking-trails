@@ -1,4 +1,4 @@
-class TrailsController < ApplicationController
+class TrailUsersController < ApplicationController
   before_action :set_trail, only: [:show, :edit, :update, :destroy]
 
   def index
@@ -28,7 +28,7 @@ class TrailsController < ApplicationController
 
   private
     def set_trail
-      @trail_user = TrailUser.find(params[:id])
+      @trail_user = TrailUser.where(user_id: params[:user_id])
     end
 
     def trail_user_params
