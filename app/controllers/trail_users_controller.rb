@@ -16,7 +16,7 @@ class TrailUsersController < ApplicationController
   def update
     respond_to do |format|
       if @trail_user.update(trail_user_params)
-        format.html { redirect_to @trail, notice: 'Comment was successfully added.' }
+        format.html { redirect_to @trail}
         format.json { render :show, status: :ok, location: @trail_user }
       else
         format.html { render :edit }
