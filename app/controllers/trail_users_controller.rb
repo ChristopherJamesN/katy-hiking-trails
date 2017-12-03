@@ -32,6 +32,6 @@ class TrailsController < ApplicationController
     end
 
     def trail_user_params
-      params.require(:trail_user).permit(:comment)
+      params.require(:trail_user).permit(:comments)
     end
 end
