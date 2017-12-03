@@ -29,12 +29,14 @@
         <td><%= @trail.description %></td>
       </tr>
       <tr>
-        <td>Comments: </td>
-        <td>
-          <% @trail_user.comments.each do |comment| %>
-            <p> <%= comment %> </p>
-          <% end %>
-        </td>
+        <% if @trail_user %>
+          <td>Comments: </td>
+          <td>
+            <% @trail_user.comments.each do |comment| %>
+              <p> <%= comment %> </p>
+            <% end %>
+          </td>
+        <% end %>
       </tr>
       <tr>
         <td>Link to Map: </td>

@@ -42,7 +42,10 @@ class TrailsController < ApplicationController
   # GET /trails/1
   # GET /trails/1.json
   def show
-    @trail_user = TrailUser.find_by(user_id: current_user.id, trail_id: @trail.id)
+    if current_user
+      @trail_user = TrailUser.find_by(user_id: current_user.id, trail_id: @trail.id)
+    else
+    end
   end
 
   # GET /trails/new
@@ -74,7 +77,7 @@ class TrailsController < ApplicationController
   # PATCH/PUT /trails/1.json
   def update
     @trail_user = TrailUser.find_or_create_by(user_id: current_user.id, trail_id: @trail.id)
-    @trail_user.comments << params[:trail][:notes]
+    @trail_user.update(comments: @trail_user.comments << params[:trail][:notes])
     redirect_to @trail, notice: 'Comment was successfully added.'
     #respond_to do |format|
     #  if @trail.update_attribute(:notes, @trail.notes.push(trail_params[:notes].to_s))
