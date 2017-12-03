@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'trails/favorites', to: 'trails#favorites'
   get '/trails/addicks', to: 'trails#addicks'
   get '/trails/barker', to: 'trails#barker'
+  get '/trails/comment/:id', to: 'trail_users#update'
 
   resources :trails
   root to: "trails#home"
