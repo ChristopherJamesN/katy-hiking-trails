@@ -11,6 +11,7 @@ gem 'rails_12factor'
 gem "sprockets"
 gem "sprockets-es6"
 gem 'devise'
+gem 'stripe'
 
 gem 'dotenv-rails', groups: [:development, :test]
 

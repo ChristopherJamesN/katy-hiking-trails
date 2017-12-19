@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/trails/barker', to: 'trails#barker'
   get '/trails/comment/:id', to: 'trail_users#update'
 
+  resources :charges
   resources :trails
   root to: "trails#home"
 end
