@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post 'user_token' => 'user_token#create'
   get 'trails/favorite/:id', to: 'trails#favorite'
   get 'trails/remove/:id', to: 'trails#remove'
   get 'trails/favorites', to: 'trails#favorites'
