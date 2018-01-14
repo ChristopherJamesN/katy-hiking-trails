@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  post 'user_token' => 'user_token#create'
+  devise_for :users
   get 'trails/favorite/:id', to: 'trails#favorite'
   get 'trails/remove/:id', to: 'trails#remove'
   get 'trails/favorites', to: 'trails#favorites'
@@ -11,7 +11,6 @@ Rails.application.routes.draw do
 
   scope '/api' do
     post '/register' => 'users#create'
-    devise_for :users
     mount Knock::Engine => '/knock'
   end
 
