@@ -12,6 +12,7 @@ gem "sprockets"
 gem "sprockets-es6"
 gem 'devise'
 gem 'stripe'
+gem 'omniauth'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
