@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'users/sessions' }
   get 'trails/favorite/:id', to: 'trails#favorite'
   get 'trails/remove/:id', to: 'trails#remove'
   get 'trails/favorites', to: 'trails#favorites'
