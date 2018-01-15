@@ -11,6 +11,7 @@ Rails.application.routes.draw do
 
   scope '/api' do
     post '/register' => 'users#create'
+    resources :users
     mount Knock::Engine => '/knock'
   end
 
