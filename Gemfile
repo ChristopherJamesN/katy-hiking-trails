@@ -13,6 +13,7 @@ gem "sprockets-es6"
 gem 'devise'
 gem 'stripe'
 gem 'omniauth'
+gem 'bcrypt', '~> 3.1.7'
 
 gem 'dotenv-rails', groups: [:development, :test]
 
