@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   post '/user_token' => 'user_token#create'
 
   scope '/api' do
-    post '/register' => 'users#create'
+    post '/register' => 'sessions#create'
     mount Knock::Engine => '/knock'
   end
 
