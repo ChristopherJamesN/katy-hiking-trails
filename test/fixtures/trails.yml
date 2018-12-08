@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  description: MyString
-  notes: MyString
-  maplink: MyString
+  name: "Test Trail One"
+  description: "Test Trail One Description"
+  notes: ["Test Trail One Notes"]
+  maplink: "Test Trail One MapLink"
 
 two:
-  name: MyString
-  description: MyString
-  notes: MyString
-  maplink: MyString
+  name: "Test Trail Two"
+  description: "Test Trail Two Description"
+  notes: ["Test Trail Two Notes"]
+  maplink: "Test Trail Two MapLink"
