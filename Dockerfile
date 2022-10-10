@@ -25,6 +25,8 @@ LABEL fly_launch_runtime="rails"
 
 ARG BUNDLER_VERSION=2.3.7
 
+ARG NODE_VERSION=18.10.0
+
 ARG RAILS_ENV=production
 ENV RAILS_ENV=${RAILS_ENV}
 
@@ -46,7 +48,7 @@ RUN mkdir -p tmp/pids
 
 FROM base as build_deps
 
-ARG BUILD_PACKAGES="git build-essential libpq-dev wget vim curl gzip xz-utils libsqlite3-dev"
+ARG BUILD_PACKAGES="git build-essential libpq-dev wget vim curl gzip xz-utils libsqlite3-dev nodejs libv8-dev"
 ENV BUILD_PACKAGES ${BUILD_PACKAGES}
 
 RUN --mount=type=cache,id=dev-apt-cache,sharing=locked,target=/var/cache/apt \
