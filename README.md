@@ -1,6 +1,6 @@
 # README
 
-A web application built on Rails used to list maintained hiking trails in the Katy, Texas area. Hosted on fly.io here: https://katy-hiking-trails.fly.dev/
+A web application that lists maintained hiking trails in the Katy, Texas area. Hosted on fly.io here: https://katy-hiking-trails.fly.dev/
 
 ## Installation
 
