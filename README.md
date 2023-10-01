@@ -17,8 +17,15 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/Christ
 
 ## Deployment
 
+One time setup to create a new fly.io app, run: `fly launch` and then `fly secrets set GOOGLE_MAPS_EMBED_API_KEY=$GOOGLE_MAPS_EMBED_API_KEY`
+
+and then
+`fly secrets set DISABLE_DATABASE_ENVIRONMENT_CHECK=1` .
+
 As noted above, the application is deployed on fly.io. After making changes, to deploy a new
 version, run `fly deploy` .
+
+To delete old database data and reseed the database run `fly ssh console -C "/rails/bin/rails db:seed:replant"` .
 
 Run `fly open` to open the deployed application in a web browser (or visit
 https://katy-hiking-trails.fly.dev/).
