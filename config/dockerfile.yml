@@ -2,4 +2,5 @@
 
 ---
 options:
+  bin-cd: true
   sudo: true
