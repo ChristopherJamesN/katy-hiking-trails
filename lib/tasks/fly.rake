@@ -11,8 +11,21 @@ namespace :fly do
   #  - full access to secrets, databases
   #  - failures here prevent deployment
   task :release do
-    sh 'rake db:migrate'
-    sh 'rake db:seed'
+    #sh 'rake db:migrate'
+    #sh 'rake db:seed:replant'
+    sh 'rake db:reset'
+    # Trying to do this causes errors like:
+    #    INFO [fly api proxy] listening at /.fly/api
+    # 2023/10/01 03:23:46 listening on [fdaa:0:b6f5:a7b:162:35e6:b277:2]:22 (DNS: [fdaa::3]:53)
+    # rake db:reset
+    # (5015.3ms)  DROP DATABASE IF EXISTS "katy_hiking_trails"
+    # PG::ObjectInUse: ERROR:  database "katy_hiking_trails" is being accessed by other users
+    # DETAIL:  There is 1 other session using the database.
+    # Couldn't drop database 'katy_hiking_trails'
+    # rake aborted!
+    # ActiveRecord::StatementInvalid: PG::ObjectInUse: ERROR:  database "katy_hiking_trails" is being accessed by other users
+    # DETAIL:  There is 1 other session using the database.
+    # /app/vendor/bundle/ruby/3.1.0/gems/activerecord-7.0.4/lib/active_record/connection_adapters/postgresql/database_statements.rb:48:in `exec'
   end
 
   # SERVER step:
